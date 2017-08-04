@@ -1,4 +1,26 @@
 {
+  "name": "fastify-couchbase",
+  "description": "Fastify Couchbase connection plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauroJr/fastify-couchbase.git"
+  },
+  "keywords": [
+    "fastify",
+    "plugin",
+    "couchbase"
+  ],
+  "author": "Mauro Junior",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MauroJr/fastify-couchbase/issues"
+  },
+  "homepage": "https://github.com/MauroJr/fastify-couchbase#readme",
   "dependencies": {
     "couchbase": "^2.3.5",
     "fastify-plugin": "^0.1.0"
