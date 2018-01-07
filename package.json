@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "eslint ./index.js && tap ./test.js"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,9 @@
     "fastify-plugin": "^0.2.1"
   },
   "devDependencies": {
-    "eslint": "^4.14.0",
+    "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-import": "^2.7.0",
     "fastify": "^0.37.0",
     "tap": "^11.0.1"
   }
