@@ -5,15 +5,10 @@ const couchbase = require('couchbase');
 
 function fastifyCouchbase(fastify, options, next) {
   const cluster = new couchbase.Cluster(options.url);
-  const args = [options.bucketName];
 
-  if (options.bucketPassword) {
-    args.push(options.bucketPassword);
-  }
+  cluster.authenticate(options.username, options.password);
 
-  args.push(onConnect);
-
-  const bucket = cluster.openBucket(...args);
+  const bucket = cluster.openBucket(options.bucketName, onConnect);
 
   function onConnect(err) {
     if (err) {
@@ -21,6 +16,7 @@ function fastifyCouchbase(fastify, options, next) {
     }
 
     const cb = {
+      cluster,
       bucket
     };
 
